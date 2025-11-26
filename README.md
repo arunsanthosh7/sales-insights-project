@@ -1,5 +1,5 @@
 # sales-insights-project
-Sales Insights project using SQL, Excel, MySQL and Power BI (Atliq Technologies data)
+Sales Insights project using MySQL and Power BI (Atliq Technologies data)
 
 ### Data Analysis Using SQL
 

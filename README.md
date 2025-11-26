@@ -39,8 +39,6 @@ This dashboard enables sales managers to make informed decisions and identify gr
 
 ---
 
-```md
-
 ---
 
 ## 🔑 Key Insights Generated

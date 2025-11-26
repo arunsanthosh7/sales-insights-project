@@ -1,49 +1,68 @@
-# sales-insights-project
-Sales Insights project using MySQL and Power BI (Atliq Technologies data)
+# 📊 Sales Insights Project (Atliq Technologies)
+**Tools Used:**   MySQL | Excel | Power BI  
+**Completed:** November 2024  
 
-### Data Analysis Using SQL
+---
 
-1. Show all customer records
+## 🚀 Project Overview
+This project provides actionable **Sales Insights** for Atliq Technologies using MySQL, Excel, and Power BI.  
+It covers the complete analytics workflow—**data extraction, cleaning, modeling, and dashboard visualization**—to support business decision-making.
 
-    `SELECT * FROM customers;`
+---
 
-1. Show total number of customers
+## 📁 Project Deliverables
 
-    `SELECT count(*) FROM customers;`
+### ✅ 1. Data Extraction (MySQL)
+- Extracted sales, customers, products, and market data from provided MySQL datasets.  
+- Performed joins, filtering, and aggregations to prepare refined datasets.  
+- Ensured data quality by removing duplicates, handling nulls, and validating records.
 
-1. Show transactions for Chennai market (market code for chennai is Mark001
+---
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+### ✅ 2. Data Cleaning & Preparation (Excel + SQL)
+- Cleaned raw files and standardized column formats.  
+- Created structured data tables for reporting and analysis.  
+- Built a refined model suitable for BI dashboards.
 
-1. Show distrinct product codes that were sold in chennai
+---
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+### ✅ 3. Sales Insights Dashboard (Power BI)
+Built an **interactive dashboard** with drill-downs and filters to monitor key metrics such as:
 
-1. Show transactions where currency is US dollars
+- 📈 Revenue & Profit Trends  
+- 🏆 Top Customers & Products  
+- 🌍 Regional Sales Performance  
+- 🕒 Monthly & Quarterly Sales  
+- 🔍 Category-level Insights  
 
-    `SELECT * from transactions where currency="USD"`
+This dashboard enables sales managers to make informed decisions and identify growth opportunities.
 
-1. Show transactions in 2020 join by date table
+---
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+```md
 
-1. Show total revenue in year 2020,
+---
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
+## 🔑 Key Insights Generated
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+- Identified monthly revenue trends and peak sales periods.  
+- Found top-performing products and customers.  
+- Highlighted weak markets and areas needing strategic focus.  
+- Delivered insights to support sales planning and forecasting.  
 
-1. Show total revenue in year 2020 in Chennai
+---
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
+## 🧑‍💻 About the Author
+
+**Arun Santhosh M**  
+Data Analyst | SQL | Excel | Power BI  
+📧 Email: **arunsanthosh7000@gmail.com**  
+🔗 LinkedIn: **www.linkedin.com/in/arunsanthosh07**
+
+---
+
+✨ *Feel free to explore the files and dashboard included in this project.*
 
 
-Data Analysis Using Power BI
-============================
 
-1. Formula to create norm_amount column
 
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`

@@ -1,5 +1,5 @@
 # 📊 Sales Insights Project (Atliq Technologies)
-**Tools Used:**   MySQL | Excel | Power BI  
+**Tools Used:**   MySQL | Excel | Power BI | Python 
 **Completed:** November 2024  
 
 ---
